@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CyberShield - Website Blocked</title>
+    <style>
+        :root {
+            --primary-color: #0052FF;
+            --danger-color: #EF4444;
+            --text-color: #1F2937;
+            --bg-color: #F9FAFB;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--danger-color);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 16px 0;
+            color: var(--text-color);
+        }
+
+        .message {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #4B5563;
+            margin-bottom: 24px;
+        }
+
+        .details {
+            background: #FEF2F2;
+            border: 1px solid #FEE2E2;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 8px;
+        }
+
+        .detail-label {
+            font-weight: 500;
+            width: 120px;
+            color: #991B1B;
+        }
+
+        .detail-value {
+            color: #B91C1C;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .button-primary {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .button-primary:hover {
+            background: #0043CC;
+        }
+
+        .button-secondary {
+            background: white;
+            color: var(--text-color);
+            border: 1px solid #E5E7EB;
+        }
+
+        .button-secondary:hover {
+            background: #F3F4F6;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #111827;
+            --text-color: #F9FAFB;
+        }
+
+        [data-theme="dark"] .container {
+            background: #1F2937;
+        }
+
+        [data-theme="dark"] .details {
+            background: #991B1B;
+            border-color: #B91C1C;
+        }
+
+        [data-theme="dark"] .detail-label,
+        [data-theme="dark"] .detail-value {
+            color: #FEE2E2;
+        }
+
+        [data-theme="dark"] .message {
+            color: #D1D5DB;
+        }
+
+        [data-theme="dark"] .button-secondary {
+            background: #374151;
+            border-color: #4B5563;
+            color: #F9FAFB;
+        }
+
+        [data-theme="dark"] .button-secondary:hover {
+            background: #4B5563;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/icon48.png" alt="CyberShield Logo" class="logo">
+            <h1 class="title">Access Blocked - Security Warning</h1>
+        </div>
+
+        <h2 class="subtitle">Website Access Blocked</h2>
+        <p class="message">This website has been blocked due to security concerns. Our scan has detected potential threats that could harm your device or compromise your data.</p>
+
+        <div class="details">
+            <div class="detail-row">
+                <span class="detail-label">Category:</span>
+                <span class="detail-value" id="category">Malicious Website</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">URL:</span>
+                <span class="detail-value" id="blocked-url"></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Detections:</span>
+                <span class="detail-value" id="detection-count"></span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="button button-secondary" id="go-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                    <path d="M10 12L6 8L10 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Go Back
+            </button>
+            <button class="button button-primary" id="add-exception">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                    <path d="M8 3.33334V12.6667M12.6667 8L3.33333 8" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Add to Exceptions
+            </button>
+        </div>
+    </div>
+    <script src="warning.js"></script>
+</body>
+</html> 
