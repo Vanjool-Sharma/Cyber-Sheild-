@@ -15,7 +15,7 @@
         UI_STUCK_TIMEOUT: 15000, // 15 second timeout for UI stuck detection
         UI_THEME: 'light', // light or dark theme
         SHOW_DETAILED_RESULTS: true, // Show detailed results by default,
-        MAX_UPLOAD_RETRIES: 2, // Maximum number of upload retries
+        
         
         // File type specific settings
         SUPPORTED_TYPES: {
